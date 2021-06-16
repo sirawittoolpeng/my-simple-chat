@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My little chat app</title>
+</head>
+
+<body>
+    <h1>My little chat app</h1>
+    <div>
+        <label class="room-label">
+            Enter a room number:
+            <input id='room' type="text" class="room-input">
+        </label>
+    </div>
+    <div>
+        <label class="room-label">
+            Enter Name:
+            <input id='name' type="text" class="name-input"> <button type='button' id="join-submit">Join</button>
+        </label>
+    </div>
+
+    <div id='chat-dump' class="chat-dump" style='height: 400px;width:400px;overflow-y: scroll;'></div>
+    <div class="flex-container" style="height:auto;width: 400px;display: flex;flex-direction: row;">
+        <div style="flex: 50%;"> 
+            <input type="button" id="L-like" value="Red Corner">
+        </div>
+        <div style="flex:none;align-items: flex-end;"> 
+            <input type="button" id="R-like" value="Blue Corner">
+        </div>
+    </div>
+
+    <label class="chat-label" for="chat-input">
+        Enter a message:
+    </label>
+    <input autocomplete="off" placeholder="Enter a message" type="text" id="chat-input">
+    <input type="button" id="chat-submit" value="enter">
+
+    <script src="socket.io/socket.io.js"></script>
+    <script src="index.js"></script>
+</body>
+<style>
+    .chat-message--user {
+        text-align: right;
+    }
+</style>
+
+</html>
